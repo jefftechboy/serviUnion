@@ -4,8 +4,18 @@
         "use": "@vercel/python",
         "config": { "maxLambdaSize" : "15mb", "runtime": "python3.9" }
     }],
-    "routes":[{
-        "src": "/(.*)",
-        "dest":"GrupoZero/wsgi.py"
-    }]
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/staticfiles/$1"
+        },
+        {
+            "src": "/media/(.*)",
+            "dest": "/media/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "GrupoZero/wsgi.py"
+        }
+    ]
 }
