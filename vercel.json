@@ -6,10 +6,6 @@
     }],
     "routes":[
         {
-            "src": "core/static/(.*)",
-            "dest": "/staticfiles/$1"
-        },
-        {
             "src": "/(.*)",
             "dest": "GrupoZero/wsgi.py"
         }
