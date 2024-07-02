@@ -1,11 +1,19 @@
 {
-    "builds": [{
-        "src": "GrupoZero/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize" : "15mb", "runtime": "python3.9" }
-    }],
-    "routes":[{
-        "src": "/(.*)",
-        "dest":"GrupoZero/wsgi.py"
-    }]
+  "builds": [
+    {
+      "src": "GrupoZero/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "static/core/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "GrupoZero/wsgi.py"
+    }
+  ]
 }
