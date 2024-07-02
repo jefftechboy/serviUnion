@@ -21,7 +21,7 @@ import os
 
 # Configuración de archivos estáticos
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'serviUnion/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'core/static')]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
